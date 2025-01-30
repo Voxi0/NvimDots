@@ -2,9 +2,6 @@
 require("options")
 require("keymaps")
 
--- Required for Nvchad's Base46
-vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46_cache/"
-
 -- Bootstrap Lazy.nvim - Plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -30,7 +27,3 @@ require("lazy").setup({
 		{ import = "plugins" },
 	},
 })
-
--- Load Base46
-dofile(vim.g.base46_cache .. "defaults")
-
