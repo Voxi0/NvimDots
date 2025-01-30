@@ -6,7 +6,7 @@ return {
 		opts = {},
 	},
 
-	-- A collection of quality of life plugins
+	-- Mini.nvim and Snacks.nvim are collections of small quality of life plugins
 	{
 		"echasnovski/mini.nvim",
 		version = false,
@@ -41,12 +41,6 @@ return {
 		priority = 1000,
 		lazy = false,
 		opts = {
-			-- Animations
-			animate = { enabled = false },
-
-			-- Dashboard
-			dashboard = { enabled = true },
-
 			-- Render the file as quickly as possible before loading any plugins when doing "nvim <some_file>"
 			quickfile = { enabled = true },
 
