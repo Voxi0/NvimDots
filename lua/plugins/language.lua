@@ -54,13 +54,26 @@ return {
 					-- "enter" - Mappings similar to "super-tab" but "enter" to accept instead of "tab"
 					keymap = { preset = "super-tab" },
 
+					-- Preset for snippets - "default", "luasnip" or "mini_snippets"
+					snippets = { preset = "default" },
+
+					-- Experimental signature help support
+					signature = { enabled = true },
+
+					-- Appearence
 					appearance = {
 						-- "normal" or "mono" - Adjusts spacing to ensure that icons are aligned
 						nerd_font_variant = "mono",
 					},
 
 					-- Default list of enabled providers
-					sources = { default = { "lsp", "path", "snippets", "buffer" } },
+					sources = {
+						-- Add "buffer" if you want text completions
+						default = { "lsp", "path", "snippets" },
+
+						-- Disable command line completions
+						cmdline = {},
+					},
 
 					-- Completion
 					completion = {
