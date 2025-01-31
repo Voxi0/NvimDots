@@ -90,8 +90,7 @@ return {
 			options = {
 				icons_enabled = true,
 				theme = "auto",
-				section_separators = "",
-				component_separators = "",
+				disabled_filetypes = { "NvimTree", statusline = { "dashboard", "alpha", "ministarter", "snacks_dashboard" } }
 			},
 		},
 	},

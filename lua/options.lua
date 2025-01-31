@@ -1,6 +1,12 @@
--- Line numbering
-vim.o.number = true
-vim.o.relativenumber = false
+-- Set what character to display for empty lines
+vim.opt.fillchars = { eob = " " }
+
+-- Ensure that Neovim shows the "best" version of a colorscheme
+vim.o.termguicolors = true
+
+-- Disable the default Neovim file explorer (REQUIRED)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- Indentation
 vim.o.expandtab = false
@@ -19,13 +25,6 @@ vim.o.wrap = false
 
 -- Ignore uppercase letters unless the search term has an uppercase letter
 vim.o.smartcase = true
-
--- Ensure that Neovim shows the "best" version of a colorscheme
-vim.o.termguicolors = true
-
--- Disble Netrw which is the default built-in file explorer in Neovim
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
 
 -- For GUI Neovim clients e.g. Neovide
 vim.o.guifont = "JetBrainsMono Nerd Font:h10"
