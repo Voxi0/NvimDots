@@ -1,5 +1,5 @@
 return {
-	-- Treesitter - Syntax highlighting
+	-- Syntax highlighting
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
@@ -15,28 +15,82 @@ return {
 		},
 	},
 
-	-- LSP
+	-- LSP and autocompletion
 	{
 		"neovim/nvim-lspconfig",
-		dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
-		config = function()
-			-- Setup Mason
-			require("mason").setup({
-				ui = {
-					icons = {
-						package_installed = "✓",
-						package_pending = "➜",
-						package_uninstalled = "✗",
+		dependencies = {
+			-- Allows you to interactively install language tools e.g. formatters
+			{
+				"williamboman/mason.nvim",
+				opts = {
+					ui = {
+						icons = {
+							package_installed = "✓",
+							package_pending = "➜",
+							package_uninstalled = "✗",
+						},
 					},
 				},
-			})
+			},
 
-			-- Setup Mason LSP config
-			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls" },
-				automatic_installation = true,
-			})
+			-- Makes it easier to hook up Mason to Nvim-Lspconfig
+			{
+				"williamboman/mason-lspconfig.nvim",
+				opts = {
+					ensure_installed = { "lua_ls" },
+					automatic_installation = true,
+				},
+			},
 
+			-- Autocompletion
+			{
+				"saghen/blink.cmp",
+				version = "*",
+				dependencies = { "rafamadriz/friendly-snippets", "xzbdmw/colorful-menu.nvim" },
+				opts_extend = { "sources.default" },
+				opts = {
+					-- "default" - Mappings similar to built-in completion
+					-- "super-tab" - Mappings similar to VSCode (Tab to accept and arrow keys to navigate)
+					-- "enter" - Mappings similar to "super-tab" but "enter" to accept instead of "tab"
+					keymap = { preset = "super-tab" },
+
+					appearance = {
+						-- "normal" or "mono" - Adjusts spacing to ensure that icons are aligned
+						nerd_font_variant = "mono",
+					},
+
+					-- Default list of enabled providers
+					sources = { default = { "lsp", "path", "snippets", "buffer" } },
+
+					-- Completion
+					completion = {
+						ghost_text = { enabled = true },
+						documentation = {
+							auto_show = true,
+							auto_show_delay_ms = 500,
+						},
+						menu = {
+							auto_show = true,
+							draw = {
+								-- "colorful-menu.nvim" combines "label" and "label_description" together so they aren't required
+								columns = { { "kind_icon" }, { "label", gap = 1 } },
+								components = {
+									label = {
+										text = function(ctx)
+											return require("colorful-menu").blink_components_text(ctx)
+										end,
+										highlight = function(ctx)
+											return require("colorful-menu").blink_components_highlight(ctx)
+										end,
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+		config = function()
 			-- Function to be called when a LSP attaches to a buffer
 			local onAttach = function(_, bufnr)
 				-- LSP Keybinds
@@ -54,58 +108,11 @@ return {
 				function(server)
 					lspconfig[server].setup({
 						on_attach = onAttach,
+						capabilities = require("blink.cmp").get_lsp_capabilities(),
 					})
 				end,
 			})
 		end,
-	},
-
-	-- Autocompletion
-	{
-		"saghen/blink.cmp",
-		dependencies = { "rafamadriz/friendly-snippets", "xzbdmw/colorful-menu.nvim" },
-		version = "*",
-		opts_extend = { "sources.default" },
-		opts = {
-			-- "default" - Mappings similar to built-in completion
-			-- "super-tab" - Mappings similar to VSCode (Tab to accept and arrow keys to navigate)
-			-- "enter" - Mappings similar to "super-tab" but "enter" to accept instead of "tab"
-			keymap = { preset = "super-tab" },
-
-			appearance = {
-				-- "normal" or "mono" - Adjusts spacing to ensure that icons are aligned
-				nerd_font_variant = "mono",
-			},
-
-			-- Default list of enabled providers
-			sources = { default = { "lsp", "path", "snippets", "buffer" } },
-
-			-- Completion
-			completion = {
-				ghost_text = { enabled = true },
-				documentation = {
-					auto_show = true,
-					auto_show_delay_ms = 500,
-				},
-				menu = {
-					auto_show = true,
-					draw = {
-						-- "colorful-menu.nvim" combines "label" and "label_description" together so they aren't required
-						columns = { { "kind_icon" }, { "label", gap = 1 } },
-						components = {
-							label = {
-								text = function(ctx)
-									return require("colorful-menu").blink_components_text(ctx)
-								end,
-								highlight = function(ctx)
-									return require("colorful-menu").blink_components_highlight(ctx)
-								end,
-							},
-						},
-					},
-				},
-			},
-		},
 	},
 
 	-- Formatting
