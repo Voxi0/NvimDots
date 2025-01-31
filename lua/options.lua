@@ -20,6 +20,12 @@ vim.o.foldtext = ""
 vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 
+-- Clipboard
+vim.o.clipboard = "unnamedplus"
+
+-- Spell checking
+vim.o.spell = true
+
 -- Don't wrap text around the screen horizontally
 vim.o.wrap = false
 

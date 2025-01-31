@@ -37,11 +37,24 @@ return {
 				automatic_installation = true,
 			})
 
+			-- Function to be called when a LSP attaches to a buffer
+			local onAttach = function(_, bufnr)
+				-- LSP Keybinds
+				local map = vim.keymap.set
+				map("n", "K", vim.lsp.buf.hover, { desc = "Show Information" })
+				map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Show Code Actions" })
+				map("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
+				map("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
+				map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename All References to The Symbol Under The Cursor" })
+			end
+
 			-- Automatically configure LSP handlers
 			local lspconfig = require("lspconfig")
 			require("mason-lspconfig").setup_handlers({
 				function(server)
-					lspconfig[server].setup({})
+					lspconfig[server].setup({
+						on_attach = onAttach,
+					})
 				end,
 			})
 		end,
