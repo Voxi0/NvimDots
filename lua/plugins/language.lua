@@ -103,7 +103,7 @@ return {
 		keys = {
 			-- Format entire file
 			{
-				"<leader>mp",
+				"<leader>fm",
 				function()
 					require("conform").format({
 						lsp_fallback = true,
