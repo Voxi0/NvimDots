@@ -41,9 +41,6 @@ return {
 		priority = 1000,
 		lazy = false,
 		opts = {
-			-- Animations
-			animate = { enabled = false },
-
 			-- Dashboard
 			dashboard = { enabled = true },
 
@@ -55,6 +52,12 @@ return {
 				enabled = true,
 				timeout = 3000,
 			},
+
+			-- Animations
+			animate = { enabled = true },
+
+			-- Pretty statuscolumn
+			statuscolumn = { enabled = true },
 
 			-- Indentation guides
 			indent = { enabled = true },

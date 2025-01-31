@@ -1,17 +1,20 @@
 return {
 	-- Colorscheme picker with live preview and persistence
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{ "rose-pine/neovim", name = "rose-pine", priority = 1000 },
 	{
-		"zaldih/themery.nvim",
-		lazy = false,
+		"rose-pine/neovim",
+		name = "rose-pine",
 		opts = {
-			themes = { "catppuccin", "rose-pine" },
-			livePreview = true,
+			variant = "main",
+			dark_variant = "main",
+			styles = {
+				bold = true,
+				italic = true,
+				transparency = false,
+			},
 		},
-		keys = {
-			{ "<leader>th", "<CMD>Themery<CR>", desc = "Choose colorscheme" },
-		},
+		config = function()
+			vim.cmd("colorscheme rose-pine")
+		end,
 	},
 
 	-- UI improvement plugins

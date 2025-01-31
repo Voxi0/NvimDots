@@ -26,3 +26,6 @@ vim.o.termguicolors = true
 -- Disble Netrw which is the default built-in file explorer in Neovim
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- For GUI Neovim clients e.g. Neovide
+vim.o.guifont = "JetBrainsMono Nerd Font:h10"
