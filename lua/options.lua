@@ -1,6 +1,6 @@
 -- Line numbering
 vim.o.number = true
-vim.o.relativenumber = true
+vim.o.relativenumber = false
 
 -- Indentation
 vim.o.expandtab = false
