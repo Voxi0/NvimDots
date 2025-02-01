@@ -8,13 +8,16 @@ and useful keybinds that just makes life easier e.g. pressing `Control + S` keys
 in literally every text editing software out there like Notepad and Word.
 
 ## Install
-Install NvimDots on your system by running the proper commands for your system.
+```bash
+# Linux / MacOS (Unix)
+git clone https://github.com/Voxi0/NvimDots ~/.config/nvim && nvim
 
-- Linux: `git clone https://github.com/Voxi0/NvimDots ~/.config/nvim && nvim`
+# Windows CMD
+git clone https://github.com/NvChad/starter %USERPROFILE%\AppData\Local\nvim && nvim
 
-- Windows:
-    - CMD: `git clone https://github.com/NvChad/starter %USERPROFILE%\AppData\Local\nvim && nvim`
-    - Powershell: `git clone https://github.com/NvChad/starter $ENV:USERPROFILE\AppData\Local\nvim && nvim`
+# Windows Powershell
+git clone https://github.com/NvChad/starter $ENV:USERPROFILE\AppData\Local\nvim && nvim
+```
 
 ## Post-Install
 - Run `:Lazy sync` command in Neovim to update all plugins.
@@ -23,7 +26,7 @@ Install NvimDots on your system by running the proper commands for your system.
 
 ## Uninstall
 ```bash
-# Linux / MacOS (unix)
+# Linux / MacOS (Unix)
 rm -rf ~/.config/nvim
 rm -rf ~/.local/state/nvim
 rm -rf ~/.local/share/nvim
