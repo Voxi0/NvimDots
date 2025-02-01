@@ -4,6 +4,9 @@ vim.opt.fillchars = { eob = " " }
 -- Ensure that Neovim shows the "best" version of a colorscheme
 vim.o.termguicolors = true
 
+-- Line numbers
+vim.o.number = true
+
 -- Disable the default Neovim file explorer (REQUIRED)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1

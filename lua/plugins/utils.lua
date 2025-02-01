@@ -11,6 +11,30 @@ return {
 		"echasnovski/mini.nvim",
 		version = false,
 		config = function()
+			-- Text edit operators
+			require("mini.operators").setup({
+				evaluate = {
+					prefix = "g=",
+					func = nil,
+				},
+				exchange = {
+					prefix = "gx",
+					reindent_linewise = true,
+				},
+				multiply = {
+					prefix = 'gm',
+					func = nil,
+				},
+				replace = {
+					prefix = 'gr',
+					reindent_linewise = true,
+				},
+				sort = {
+					prefix = 'gs',
+					func = nil,
+				}
+			})
+
 			-- Surround
 			require("mini.surround").setup({
 				search_method = "cover",
@@ -21,15 +45,15 @@ return {
 
 				-- Mappings
 				mappings = {
-					add = 'sa', 						-- Add surrounding in Normal and Visual modes
-					delete = 'sd', 					-- Delete surrounding
-					find = 'sf', 						-- Find surrounding (to the right)
-					find_left = 'sF', 			-- Find surrounding (to the left)
-					highlight = 'sh', 			-- Highlight surrounding
-					replace = 'sr', 				-- Replace surrounding
-					update_n_lines = 'sn',	-- Update `n_lines`
-					suffix_last = 'l', 			-- Suffix to search with "prev" method
-					suffix_next = 'n', 			-- Suffix to search with "next" method
+					add = "sa", 						-- Add surrounding in Normal and Visual modes
+					delete = "sd", 					-- Delete surrounding
+					find = "sf", 						-- Find surrounding (to the right)
+					find_left = "sF", 			-- Find surrounding (to the left)
+					highlight = "sh", 			-- Highlight surrounding
+					replace = "sr", 				-- Replace surrounding
+					update_n_lines = "sn",	-- Update `n_lines`
+					suffix_last = "l", 			-- Suffix to search with "prev" method
+					suffix_next = "n", 			-- Suffix to search with "next" method
 				},
 			})
 
@@ -157,6 +181,16 @@ return {
 				end,
 				desc = "Telescope help tags",
 			},
+		},
+	},
+
+	-- The fastest Neovim colorizer
+	{
+		"catgoose/nvim-colorizer.lua",
+    event = "VeryLazy",
+		opts = {
+			lazy_load = true,
+			filetypes = { "css", "javascript" },
 		},
 	},
 

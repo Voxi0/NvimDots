@@ -70,9 +70,6 @@ return {
 					sources = {
 						-- Add "buffer" if you want text completions
 						default = { "lsp", "path", "snippets" },
-
-						-- Disable command line completions
-						cmdline = {},
 					},
 
 					-- Completion

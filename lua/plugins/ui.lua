@@ -17,19 +17,7 @@ return {
 		end,
 	},
 
-	-- UI improvement plugins
-	-- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu
-	{
-		"folke/noice.nvim",
-		dependencies = { "MunifTanjim/nui.nvim" },
-		event = "VeryLazy",
-		opts = {},
-	},
-
-	-- Extensible UI for Neovim notifications and LSP progress messages
-	{ "j-hui/fidget.nvim", opts = {} },
-
-	-- Snazzy bufferline with tabpage integration written in Lua
+	-- Snazzy bufferline with tab-page integration written in Lua
 	{
 		"akinsho/bufferline.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -51,8 +39,8 @@ return {
 					style = "underline",
 				},
 				max_name_length = 18,
-				max_prefix_length = 15, -- Prefix used when a buffer is de-duplicated
-				truncate_names = true, -- Whether or not tab names should be truncated
+				max_prefix_length = 15,			-- Prefix used when a buffer is de-duplicated
+				truncate_names = true,			-- Whether or not tab names should be truncated
 				tab_size = 18,
 
 				-- Icons
@@ -82,7 +70,7 @@ return {
 		},
 	},
 
-	-- Blazingly fast and easy to configure neovim statusline plugin written in pure Lua
+	-- Blazingly fast and easy to configure Neovim statusline plugin written in pure Lua
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
