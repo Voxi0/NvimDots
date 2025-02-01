@@ -103,6 +103,23 @@ return {
 					["|"] = { action = "closeopen", pair = "||", neigh_pattern = "[^\\].", register = { cr = false } },
 				},
 			})
+
+			-- Sessions
+			require("mini.sessions").setup({
+				autoread = true,			-- Whether to read default session if Neovim is opened without file arguments
+				autowrite = true,			-- Whether to write currently read session before quitting Neovim
+				directory = "",				-- Where global sessions are stored
+				file = "Session.vim",	-- Filename for local sessions
+				verbose = { read = true, write = true, delete = true },	-- Whether to print session path after action
+				force = { read = false, write = true, delete = false },	-- Whether to force possibly harmful actions (Meaning depends on function)
+
+				-- Hook functions for actions
+				hooks = {
+					-- Before/After successful action
+					pre = { read = nil, write = function() print("Writing Session...") end, delete = nil },
+					post = { read = nil, write = nil, delete = nil },
+				},
+			})
 		end,
 	},
 	{
