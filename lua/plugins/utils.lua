@@ -18,14 +18,14 @@ return {
 			global_timer = true,
 
 			-- Rich presence text options
-			editing_text        = "Editing %s",
-    	file_explorer_text  = "Browsing %s",
-    	git_commit_text     = "Committing Changes",
+			editing_text = "Editing %s",
+    	file_explorer_text = "Browsing %s",
+    	git_commit_text = "Committing Changes",
     	plugin_manager_text = "Managing Plugins",
-    	reading_text        = "Reading %s",
-    	workspace_text      = "Working on %s",
-    	line_number_text    = "Line %s Out of %s",
-    	terminal_text       = "Using The Terminal",
+    	reading_text = "Reading %s",
+    	workspace_text = "Working on %s",
+    	line_number_text = "Line %s Out of %s",
+    	terminal_text = "Using The Terminal",
 		},
 	},
 
