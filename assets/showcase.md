@@ -1,8 +1,8 @@
 Autocompletion with `blink.cmp` -
-![Autocompletion](./assets/autocompletion.png "Autocompletion")
+![Autocompletion](./assets/images/autocompletion.png "Autocompletion")
 
 `Lazy.nvim` plugin manager -
-![Lazy.nvim](./assets/lazy_plugin_manager.png "Lazy Plugin Manager")
+![Lazy.nvim](./assets/images/lazy_plugin_manager.png "Lazy Plugin Manager")
 
 LazyGit -
-![LazyGit](./assets/lazygit.png)
+![LazyGit](./assets/images/lazygit.png)

@@ -41,10 +41,10 @@ rm -Force ~\AppData\Local\nvim-data
 
 ## Showcase
 More screenshots [here](./assets/showcase.md)
-![Dashboard](./assets/dashboard.png "Snacks.Dashboard")
-![Main](./assets/main.png "Main")
+![Dashboard](./assets/images/dashboard.png "Snacks.Dashboard")
+![Main](./assets/images/main.png "Main")
 
-## Details
+## Plugins
 - Dashboard: [snacks.dashboard](https://github.com/folke/snacks.nvim/blob/main/docs/dashboard.md)
 - Colorscheme: [rose-pine](https://github.com/rose-pine/neovim)
 - File Explorer: [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
