@@ -41,6 +41,7 @@ rm -Force ~\AppData\Local\nvim-data
 
 ## Showcase
 More screenshots [here](./assets/showcase.md)
+
 ![Dashboard](./assets/images/dashboard.png "Snacks.Dashboard")
 ![Main](./assets/images/main.png "Main")
 
