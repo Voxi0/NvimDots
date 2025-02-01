@@ -42,6 +42,10 @@ rm -Force ~\AppData\Local\nvim-data
 
 ## Showcase
 ![Dashboard](./assets/dashboard.png "Snacks.Dashboard")
+![Main](./assets/main.png "Main")
+![Autocompletion](./assets/autocompletion.png "Autocompletion")
+![Lazy.nvim](./assets/lazy_plugin_manager.png "Lazy Plugin Manager")
+![LazyGit](./assets/lazygit.png)
 
 ## Contributing
 Please do add new Github issues if you have any problems, I will look into them as soon as I can although I cannot make any guarantees. Pull requests are
