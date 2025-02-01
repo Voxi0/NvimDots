@@ -16,7 +16,27 @@ Install NvimDots on your system by running the proper commands for your system.
     - CMD: `git clone https://github.com/NvChad/starter %USERPROFILE%\AppData\Local\nvim && nvim`
     - Powershell: `git clone https://github.com/NvChad/starter $ENV:USERPROFILE\AppData\Local\nvim && nvim`
 
-### Post-Install
+## Post-Install
 - Run `:Lazy sync` command in Neovim to update all plugins.
 - Run `:MasonInstallAll` command after `lazy.nvim` finishes downloading all the plugins.
 - Delete the `.git` folder and `.gitignore` file from where NvimDots was installed (Depends on your system).
+
+## Uninstall
+```bash
+# Linux / MacOS (unix)
+rm -rf ~/.config/nvim
+rm -rf ~/.local/state/nvim
+rm -rf ~/.local/share/nvim
+
+# Windows CMD
+rd -r ~\AppData\Local\nvim
+rd -r ~\AppData\Local\nvim-data
+
+# Windows PowerShell
+rm -Force ~\AppData\Local\nvim
+rm -Force ~\AppData\Local\nvim-data
+```
+
+## Contributing
+Please do add new Github issues if you have any problems, I will look into them as soon as I can although I cannot make any guarantees. Pull requests are
+welcome but for any major changes, please open an issue first to discuss what changes you desire.
