@@ -116,7 +116,7 @@ return {
 				-- Hook functions for actions
 				hooks = {
 					-- Before/After successful action
-					pre = { read = nil, write = function() print("Writing Session...") end, delete = nil },
+					pre = { read = nil, write = nil, delete = nil },
 					post = { read = nil, write = nil, delete = nil },
 				},
 			})
