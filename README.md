@@ -40,6 +40,9 @@ rm -Force ~\AppData\Local\nvim
 rm -Force ~\AppData\Local\nvim-data
 ```
 
+## Showcase
+![Dashboard](./assets/dashboard.png "Snacks.Dashboard")
+
 ## Contributing
 Please do add new Github issues if you have any problems, I will look into them as soon as I can although I cannot make any guarantees. Pull requests are
 welcome but for any major changes, please open an issue first to discuss what changes you desire.
