@@ -1,5 +1,5 @@
 # NvimDots
-<div style="text-align: center;">
+<div style="text-align: center; display: inline-block; margin: 0 10px;">
     <img src="https://img.shields.io/github/license/Voxi0/NvimDots?style=flat-square&logo=Github&label=License&labelColor=black&color=white" alt="License">
     <img src="https://img.shields.io/github/languages/code-size/Voxi0/NvimDots?style=flat-square&logo=Files&label=Size&labelColor=black&color=white" alt="Repo Size">
 </div>
