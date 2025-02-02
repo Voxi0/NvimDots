@@ -1,7 +1,7 @@
 # NvimDots
 <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
-    ![GitHub License](https://img.shields.io/github/license/Voxi0/NvimDots?style=flat-square&logo=Github&label=License&labelColor=black&color=white)
-    ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Voxi0/NvimDots?style=flat-square&logo=Files&label=Size&labelColor=black&color=white)
+    <img src="https://img.shields.io/github/license/Voxi0/NvimDots?style=flat-square&logo=Github&label=License&labelColor=black&color=white" alt="License">
+    <img src="https://img.shields.io/github/languages/code-size/Voxi0/NvimDots?style=flat-square&logo=Files&label=Size&labelColor=black&color=white" alt="Repo Size">
 </div>
 
 This is my personal configuration for Neovim using the <a href="https://github.com/folke/lazy.nvim">lazy.nvim</a> plugin manager.
