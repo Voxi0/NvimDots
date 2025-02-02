@@ -1,7 +1,8 @@
 # NvimDots
-![GitHub License](https://img.shields.io/github/license/Voxi0/NvimDots?style=flat-square&logo=Github&label=License&labelColor=black&color=white)
-![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/Voxi0/NvimDots?style=flat-square&logo=Github&label=Issues&labelColor=black&color=white)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Voxi0/NvimDots?style=flat-square&logo=Files&label=Size&labelColor=black&color=white)
+<div style="text-align: center">
+    ![GitHub License](https://img.shields.io/github/license/Voxi0/NvimDots?style=flat-square&logo=Github&label=License&labelColor=black&color=white)
+    ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Voxi0/NvimDots?style=flat-square&logo=Files&label=Size&labelColor=black&color=white)
+</div>
 
 This is my personal configuration for Neovim using the <a href="https://github.com/folke/lazy.nvim">lazy.nvim</a> plugin manager.
 
