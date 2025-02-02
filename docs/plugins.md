@@ -1,0 +1,20 @@
+## Plugins
+- Dashboard: [snacks.dashboard](https://github.com/folke/snacks.nvim/blob/main/docs/dashboard.md)
+- Colorscheme: [rose-pine](https://github.com/rose-pine/neovim)
+- File Explorer: [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
+- LSP: 
+    - [mason.nvim](https://github.com/williamboman/mason.nvim)
+    - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
+    - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+- Autocompletion: [blink.cmp](https://github.com/Saghen/blink.cmp)
+- Bufferline: [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
+- Statusline: [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+- Formatter: [conform.nvim](https://github.com/stevearc/conform.nvim)
+- Fuzzy Finder: [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- Quality of Life: 
+    - [snacks.nvim](https://github.com/folke/snacks.nvim)
+    - [mini.nvim](https://github.com/echasnovski/mini.nvim)
+- Utilities:
+    - [nvim-colorizer.lua](https://github.com/catgoose/nvim-colorizer.lua)
+    - [todo-comments](https://github.com/folke/todo-comments.nvim)
+    - [which-key.nvim](https://github.com/folke/which-key.nvim)
