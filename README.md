@@ -1,3 +1,5 @@
+![License](https://img.shields.io/github/license/Voxi0/NvimDots)
+
 # NvimDots
 This is my personal configuration for Neovim using the <a href="https://github.com/folke/lazy.nvim">lazy.nvim</a> plugin manager.
 
