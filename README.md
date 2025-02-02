@@ -1,5 +1,6 @@
 # NvimDots
-![GitHub License](https://img.shields.io/github/license/Voxi0/NvimDots?style=social&logo=Github&label=License&labelColor=black&color=white)
+![GitHub License](https://img.shields.io/github/license/Voxi0/NvimDots?style=flat-square&logo=Github&label=License&labelColor=black&color=white)
+![GitHub Repo stars](https://img.shields.io/github/stars/Voxi0/NvimDots?style=flat-square&logo=Github&label=Stars&labelColor=black&color=white)
 
 This is my personal configuration for Neovim using the <a href="https://github.com/folke/lazy.nvim">lazy.nvim</a> plugin manager.
 
