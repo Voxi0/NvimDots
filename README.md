@@ -1,5 +1,5 @@
 # NvimDots
-<div style="text-align: center">
+<div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
     ![GitHub License](https://img.shields.io/github/license/Voxi0/NvimDots?style=flat-square&logo=Github&label=License&labelColor=black&color=white)
     ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Voxi0/NvimDots?style=flat-square&logo=Files&label=Size&labelColor=black&color=white)
 </div>
