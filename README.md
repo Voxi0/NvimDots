@@ -1,5 +1,6 @@
 # NvimDots
-![GitHub License](https://img.shields.io/github/license/Voxi0/NvimDots?style=for-the-badge&logo=Github&label=License&labelColor=black&color=white)
+![GitHub License](https://img.shields.io/github/license/Voxi0/NvimDots?style=social&logo=Github&label=License&labelColor=black&color=white)
+
 This is my personal configuration for Neovim using the <a href="https://github.com/folke/lazy.nvim">lazy.nvim</a> plugin manager.
 
 I took some things from [NVChad](https://nvchad.com/) and [LazyVim](https://www.lazyvim.org/). Thanks to these amazing distributions, I discovered some cool
